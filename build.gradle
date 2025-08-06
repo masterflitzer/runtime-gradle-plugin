@@ -43,7 +43,7 @@ project.version.with {
 ext.badassRuntimePluginVersion = project.version as String
 ext.badassRuntimePluginTag = Boolean.valueOf(badassRuntimePluginReleaseBuild) ? "v$ext.badassRuntimePluginVersion" : 'master'
 
-group = 'com.dua3.gradle'
+group = 'com.datavitec'
 version = badassRuntimePluginVersion
 
 ext.asmVersion = '9.7'
@@ -106,12 +106,12 @@ dependencies {
 }
 
 gradlePlugin {
-    website = 'https://github.com/xzel23/badass-runtime-plugin'
-    vcsUrl = 'https://github.com/xzel23/badass-runtime-plugin'
+    website = 'https://github.com/masterflitzer/runtime-gradle-plugin'
+    vcsUrl = 'https://github.com/masterflitzer/runtime-gradle-plugin'
 
     plugins {
         jlink {
-            id = 'com.dua3.gradle.runtime'
+            id = 'com.datavitec.runtime'
             implementationClass = 'org.beryx.runtime.RuntimePlugin'
             displayName = 'Badass Runtime Plugin (patched)'
             description = 'A Gradle plugin that assembles your modules into a custom runtime image'
@@ -157,11 +157,11 @@ asciidoctor {
             linkattrs: true,
             linkcss: true,
             'git-tag': badassRuntimePluginTag,
-            'blob-root': "https://github.com/xzel23/badass-runtime-plugin/blob/$badassRuntimePluginTag"
+            'blob-root': "https://github.com/masterflitzer/runtime-gradle-plugin/blob/$badassRuntimePluginTag"
 }
 
 gitPublish {
-    repoUri = 'https://github.com/xzel23/badass-runtime-plugin'
+    repoUri = 'https://github.com/masterflitzer/runtime-gradle-plugin'
     branch = 'gh-pages'
 
     def pgType = project.hasProperty('ghPageType') ? ghPageType : 'latest'
