@@ -8,7 +8,7 @@
 
 ###### Changes in this fork
 
-**1.13.1-patch-1**
+**1.13.1-patch-2**
 
  - updated some dependencies, this includes the assembler so that the plugin works on newer JDK versions.
 
@@ -18,7 +18,7 @@ Make sure your environment is set to use JDK 11 and run `./gradlew build`.
 
 ###### How to use
 
-Change the plugin ID from `org.beryx.runtime` to `com.dua3.gradle.runtime` in your Gradle build files.
+Change the plugin ID from `org.beryx.runtime` to `com.datavitec.runtime` in your Gradle build files.
 
 ##### The following is the content of the original README.
 
